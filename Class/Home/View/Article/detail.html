@@ -1,0 +1,51 @@
+<extend name="Public:frameset"/>
+<block name="body-left">
+	<ol class="breadcrumb">
+	  <li>首页</li>
+	 <empty name="article_detail">
+	  <else/>
+	  <li><a href="#">{$article_detail['current']['c_name']}</a></li>
+	 </empty>
+	 <empty name="article_detail">
+	  <li><a href="#">暂无文章</a></li>
+	  <else/>
+	{$article_detail['current']['category_name']}
+	<li>{$article_detail['current']['title']}</li>
+	 </empty>
+	</ol>
+	<div class="body-left" style="background-color: white;height:800px;">
+	<div class="article-detail">
+		<div class="title text-center">{$article_detail['current']['title']}</div>
+		<div class="sub-title">
+			<div class="row">
+				<div class="col-md-3 col-md-offset-1"><i class="glyphicon glyphicon-time"></i>{$article_detail['current'][create_time]|date='Y-m-d',###}</div>
+				<div class="col-md-3"><i class="glyphicon glyphicon-user"></i>Jack Zong</div>
+				<div class="col-md-2"><i class="glyphicon glyphicon-eye-open"></i>{$article_detail['current']['hits']}</div>
+			</div>
+		</div>
+		<div class="content">
+			<p>{$article_detail['current']['content']}</p>
+		</div>
+		<div class="key-word "><i class="glyphicon glyphicon-tag"></i> 标签：{$article_detail['current']['tags']}</div>
+	</div>
+  <hr>
+	<div class="page">
+		<span>上一篇：</span><a href="{:U('Article/detail',array('id'=>$article_detail['last']['id']))}" title="{$article_detail['last']['title']}">{$article_detail['last']['title']}</a><br />
+		<hr>
+		<span>下一篇：</span><a href="{:U('Article/detail',array('id'=>$article_detail['next']['id']))}" title="{$article_detail['next']['title']}">{$article_detail['next']['title']}</a>
+	</div>
+	<!--打分版，用户可以对当前新闻、游戏或者应用等进行1-5级的评分-->
+	
+<div id="SOHUCS"></div>
+<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window._config = { showScore: true };
+    window.changyan.api.config({
+        appid: 'cys1QrtUi',
+        conf: 'prod_34efe697e3b67b4cd93db03e269eb80f'
+    });
+</script> 
+
+	</div>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</block>				

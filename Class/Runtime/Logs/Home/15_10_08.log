@@ -1,0 +1,848 @@
+[ 2015-10-08T14:25:16+08:00 ] 127.0.0.1 /Blog2.0/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006315s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007778s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.010350s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018463s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0129s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0111s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 8 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 36 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0008s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000169s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000336s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.106678s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.107039s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004897s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005073s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.012581s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012883s ]
+
+[ 2015-10-08T14:25:42+08:00 ] 127.0.0.1 /Blog2.0/index.php?m=Home&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000746s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002781s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0121s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0106s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 8 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 36 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000212s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000420s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062239s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062497s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000966s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001150s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001558s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001898s ]
+
+[ 2015-10-08T15:26:10+08:00 ] 127.0.0.1 /Blog2.0/index.php?
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000522s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.010567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011475s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0100s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0078s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 8 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 36 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0109s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000224s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000516s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053215s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053400s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000821s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001024s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001364s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001692s ]
+
+[ 2015-10-08T17:56:00+08:00 ] 127.0.0.1 /Blog2.0/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008612s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008267s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.008167s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016829s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0135s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0125s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 8 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 36 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0145s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000182s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000355s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.113109s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.113333s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006935s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007203s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007367s ]
+
+[ 2015-10-08T17:56:09+08:00 ] 127.0.0.1 /Blog2.0/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000848s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001073s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001809s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003237s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0138s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0095s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 8 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 36 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000272s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000534s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056945s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057123s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000838s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000999s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006173s ]
+
+[ 2015-10-08T17:56:18+08:00 ] 127.0.0.1 /Blog2.0/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000806s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002371s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0094s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0076s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 8 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 36 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0121s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000168s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000332s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049337s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049548s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000791s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000968s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001367s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001731s ]
+
+[ 2015-10-08T17:56:21+08:00 ] 127.0.0.1 /Blog2.0/?m=Home&c=Index&a=ajaxGetArticle&p=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001041s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002658s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0104s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: p C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php 第 19 行.
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0075s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 21 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 36 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 3,3   [ RunTime:0.0093s ]
+
+[ 2015-10-08T17:56:23+08:00 ] 127.0.0.1 /Blog2.0/index.php?m=Home&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001156s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001977s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0115s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0082s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 8 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 36 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0118s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000211s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000474s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052462s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001043s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001260s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001469s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001744s ]
+
+[ 2015-10-08T17:58:36+08:00 ] 127.0.0.1 /Blog2.0/index.php?m=Home&c=Article&a=detail&id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000831s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001513s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002622s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0405s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0094s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `id` < '2' ORDER BY id asc LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT d.id,d.title,d.content,d.hits,d.img_file,d.tags,d.create_time,d.update_time,c.pid as c_pid,c.name as category_name FROM blog_article_detail d INNER JOIN blog_article_category AS c ON d.category_id=c.id  ORDER BY id asc LIMIT 0,3   [ RunTime:0.0134s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0051s ]
+SQL: SELECT `id`,`name` FROM `blog_article_category` WHERE `status` = 1 ORDER BY id asc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000203s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000421s ]
+NOTIC: [8] Undefined index: c_name C:\wamp\www\Blog2.0\Class\Runtime\Cache\Home\8351dab5c2bad2814199f5300e452414.php 第 85 行.
+NOTIC: [8] Use of undefined constant update_time - assumed 'update_time' C:\wamp\www\Blog2.0\Class\Runtime\Cache\Home\8351dab5c2bad2814199f5300e452414.php 第 95 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.080353s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.080543s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000745s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000913s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001904s ]
+
+[ 2015-10-08T17:58:42+08:00 ] 127.0.0.1 /Blog2.0/index.php?m=Home&c=Article&a=detail&id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001073s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003167s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0357s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0089s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `id` < '2' ORDER BY id asc LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT d.id,d.title,d.content,d.hits,d.img_file,d.tags,d.create_time,d.update_time,c.pid as c_pid,c.name as category_name FROM blog_article_detail d INNER JOIN blog_article_category AS c ON d.category_id=c.id  ORDER BY id asc LIMIT 0,3   [ RunTime:0.0142s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0078s ]
+SQL: SELECT `id`,`name` FROM `blog_article_category` WHERE `status` = 1 ORDER BY id asc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000238s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000419s ]
+NOTIC: [8] Undefined index: c_name C:\wamp\www\Blog2.0\Class\Runtime\Cache\Home\8351dab5c2bad2814199f5300e452414.php 第 85 行.
+NOTIC: [8] Use of undefined constant update_time - assumed 'update_time' C:\wamp\www\Blog2.0\Class\Runtime\Cache\Home\8351dab5c2bad2814199f5300e452414.php 第 95 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073275s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073450s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000760s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001623s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002047s ]
+
+[ 2015-10-08T17:58:45+08:00 ] 127.0.0.1 /Blog2.0/index.php?m=Home&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000916s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001478s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003197s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005132s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0125s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0133s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 8 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 36 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0255s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000186s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000380s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060397s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060589s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000606s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000765s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001376s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001673s ]
+
+[ 2015-10-08T18:23:01+08:00 ] 127.0.0.1 /Blog2.0/index.php?m=Home&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000757s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000730s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002471s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0929s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0101s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 8 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 36 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0093s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000234s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000453s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062909s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.063359s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002310s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002366s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002777s ]
+
+[ 2015-10-08T19:52:21+08:00 ] 127.0.0.1 /Blog2.0/index.php?m=Home&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000864s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002018s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.054892s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.057497s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0253s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0128s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 8 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 36 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0011s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0179s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000279s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000610s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.137110s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.137392s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001436s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001722s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at C:\wamp\www\Blog2.0\ThinkPHP\Common\functions.php:848) C:\wamp\www\Blog2.0\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005850s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006195s ]
+
+[ 2015-10-08T20:45:32+08:00 ] 127.0.0.1 /Blog2.0/index.php?m=Home&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000882s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000813s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002749s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0110s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0186s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 8 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 36 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000185s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000378s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.074314s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.074580s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000670s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000884s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001623s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001961s ]
+
+[ 2015-10-08T22:27:53+08:00 ] 127.0.0.1 /Blog2.0/index.php?m=Home&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000730s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000889s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.028137s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.029371s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0122s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0117s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 8 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 36 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000182s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000363s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.134897s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.135173s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001040s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001225s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002824s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003193s ]
+
+[ 2015-10-08T22:27:56+08:00 ] 127.0.0.1 /Blog2.0/index.php?m=Home&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000913s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002654s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0123s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0122s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 8 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 36 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000200s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000394s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029652s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029856s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000722s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001228s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001531s ]
+
+[ 2015-10-08T22:49:14+08:00 ] 127.0.0.1 /Blog2.0/index.php?m=Home&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000605s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002113s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003040s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0123s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0090s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 8 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 36 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000298s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000654s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.076655s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.076842s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001318s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001667s ]
+
+[ 2015-10-08T22:49:32+08:00 ] 127.0.0.1 /Blog2.0/index.php?m=Home&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000104s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001448s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001772s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003820s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0317s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0107s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 8 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 36 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000311s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000634s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069472s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069884s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001441s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001859s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001276s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001600s ]
+
+[ 2015-10-08T22:49:33+08:00 ] 127.0.0.1 /Blog2.0/index.php?m=Home&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000763s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002549s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0131s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0077s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 8 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 36 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000344s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026814s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026998s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000970s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001231s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002217s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002775s ]
+
+[ 2015-10-08T22:49:38+08:00 ] 127.0.0.1 /Blog2.0/index.php?m=Home&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000855s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000759s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002566s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0276s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0090s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 8 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 36 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000259s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000516s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029440s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029706s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000774s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001093s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001518s ]
+
+[ 2015-10-08T22:50:07+08:00 ] 127.0.0.1 /Blog2.0/index.php?m=Home&c=Article&a=detail&id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000952s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000983s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.004092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005488s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0124s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0091s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `id` < '1' ORDER BY id asc LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT d.id,d.title,d.content,d.hits,d.img_file,d.tags,d.create_time,d.update_time,c.pid as c_pid,c.name as category_name FROM blog_article_detail d INNER JOIN blog_article_category AS c ON d.category_id=c.id  ORDER BY id asc LIMIT 0,4   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0203s ]
+SQL: SELECT `id`,`name` FROM `blog_article_category` WHERE `status` = 1 ORDER BY id asc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined offset: 2 C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 79 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000209s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000380s ]
+NOTIC: [8] Undefined index: c_name C:\wamp\www\Blog2.0\Class\Runtime\Cache\Home\8351dab5c2bad2814199f5300e452414.php 第 85 行.
+NOTIC: [8] Use of undefined constant update_time - assumed 'update_time' C:\wamp\www\Blog2.0\Class\Runtime\Cache\Home\8351dab5c2bad2814199f5300e452414.php 第 95 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.162739s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.162942s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000871s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001017s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001730s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002360s ]
+
+[ 2015-10-08T22:50:21+08:00 ] 127.0.0.1 /Blog2.0/index.php?m=Home&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000951s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000832s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002605s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0439s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0141s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 8 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 36 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0009s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000262s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000557s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032281s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032493s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000863s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001134s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002009s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002388s ]
+
+[ 2015-10-08T22:56:43+08:00 ] 127.0.0.1 /Blog2.0/index.php?m=Home&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000741s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002709s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0185s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0204s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 8 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 36 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0008s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000248s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000529s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043585s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043943s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001255s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001694s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001618s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002310s ]
+
+[ 2015-10-08T22:57:29+08:00 ] 127.0.0.1 /Blog2.0/index.php?m=Home&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000762s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002372s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0155s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0110s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 8 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 36 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000317s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000655s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030829s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031072s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000715s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001353s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001715s ]
+
+[ 2015-10-08T22:58:51+08:00 ] 127.0.0.1 /Blog2.0/index.php?m=Home&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001065s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001213s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004461s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0145s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0144s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 8 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 36 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0007s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000386s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000753s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.087842s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.088340s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000650s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000952s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001947s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002328s ]
+
+[ 2015-10-08T23:38:51+08:00 ] 127.0.0.1 /Blog2.0/index.php?m=Home&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001207s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.143435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.145168s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0147s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0107s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 8 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 36 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 38 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0013s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\Blog2.0\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined index: p C:\wamp\www\Blog2.0\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000277s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000639s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073356s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073545s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000548s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000720s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005451s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005873s ]
+

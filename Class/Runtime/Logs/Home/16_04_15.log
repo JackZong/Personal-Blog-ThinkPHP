@@ -1,0 +1,82 @@
+[ 2016-04-15T23:10:54+08:00 ] 127.0.0.1 /Blog2.0/
+ERR: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2016-04-15T23:11:03+08:00 ] 127.0.0.1 /Blog2.0/
+ERR: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2016-04-15T23:11:16+08:00 ] 127.0.0.1 /Blog2.0/
+ERR: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2016-04-15T23:11:20+08:00 ] 127.0.0.1 /Blog2.0/
+ERR: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2016-04-15T23:11:23+08:00 ] 127.0.0.1 /Blog2.0/
+ERR: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2016-04-15T23:11:43+08:00 ] 127.0.0.1 /Blog2.0/
+ERR: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2016-04-15T23:12:00+08:00 ] 127.0.0.1 /Blog2.0/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000171s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000856s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000731s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002267s ]
+ERR: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2016-04-15T23:18:08+08:00 ] 127.0.0.1 /Blog2.0/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000616s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000783s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001498s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002584s ]
+ERR: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2016-04-15T23:18:17+08:00 ] 127.0.0.1 /Blog2.0/
+ERR: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2016-04-15T23:18:20+08:00 ] 127.0.0.1 /Blog2.0/
+ERR: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2016-04-15T23:38:13+08:00 ] 127.0.0.1 /Blog2.0/
+ERR: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2016-04-15T23:38:45+08:00 ] 127.0.0.1 /Blog2.0/
+ERR: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2016-04-15T23:38:51+08:00 ] 127.0.0.1 /Blog2.0/
+ERR: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2016-04-15T23:39:15+08:00 ] 127.0.0.1 /Blog2.0/
+ERR: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2016-04-15T23:39:52+08:00 ] 127.0.0.1 /Blog2.0/
+ERR: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2016-04-15T23:39:59+08:00 ] 127.0.0.1 /Blog2.0/
+ERR: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+
+
+[ 2016-04-15T23:40:07+08:00 ] 127.0.0.1 /Blog2.0/
+ERR: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+
+

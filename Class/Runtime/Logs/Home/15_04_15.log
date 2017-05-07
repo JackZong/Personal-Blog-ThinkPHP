@@ -1,0 +1,27 @@
+[ 2015-04-15T17:48:17+08:00 ] ::1 /ClassBlog/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001188s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001774s ]
+ERR: SQLSTATE[HY000] [1049] Unknown database 'class_blog'
+
+[ 2015-04-15T17:48:26+08:00 ] ::1 /ClassBlog/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001063s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001169s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001535s ]
+ERR: SQLSTATE[HY000] [1049] Unknown database 'class_blog'
+
+[ 2015-04-15T18:10:08+08:00 ] ::1 /ClassBlog/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000951s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002279s ]
+ERR: SQLSTATE[HY000] [1049] Unknown database 'class_blog'
+

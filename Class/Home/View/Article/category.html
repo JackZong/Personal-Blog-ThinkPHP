@@ -1,0 +1,59 @@
+<extend name="Public:frameset"/>
+<block name="body-left">
+	<ol class="breadcrumb">
+	  <li>首页</li>
+	  <empty name="oneName">  
+	  	<!--判断oneName（一级标题）是否为空，为空则模板显示为空-->
+	  	<else/>
+	  	<!--不为空则模板显示$oneName（一级标题）-->
+	 	 <li>{$oneName}</li>
+	  </empty>
+	  <empty name="category_article"> 
+<!--判断category_article（根据category_id取出的文章数据）是否为空，为空则模板显示暂无文章-->
+	  	<li>暂无文章</li>
+	  	<else/>
+<!--判断category_article（根据category_id取出的文章数据）是否为空，
+不为空则模板显示$category_article[0]['category_name']（一级或二级标题）-->
+	 	 <li>{$category_article[0]['category_name']}</li>
+	  </empty>
+	</ol>
+	<div class="article-list">
+	 <volist name="category_article" id="k" empty="$empty">
+			 	<dl class="article">
+			<div class="title_time">
+			<div class="row">
+			<div class="col-md-1" style="line-height:0;margin-top:4px;padding-left:0;">
+			<span style="font-size: 60px; overflow:hidden;color:green;">{$k['create_time']}</span>
+			</div>
+			<div class="col-md-11">
+			<a href="{:U('Article/detail',array('id'=>$k['id']))}" title="{$k['title']}">{$k['title']}</a>
+			<div class="artitle_time_date">{$k['hour']}</div>
+			</div>
+			</div>
+		</div> 	
+		<dd class="article_image">
+			<a href="{:U('Article/detail',array('id'=>$k['id']))}" title="{$k['title']}">
+			<img class="img" src="__PUBLIC__/assets/global/{$k['img_file']}" onerror="this.src='./Public/assets/global/img/error.png'" style="height: 238px;">
+			</a>
+		</dd>
+		<dd>
+			<div class="content">
+				<p>{$k['content']|mb_substr=###,0,100,'utf-8'}...</p> 					
+			</div>
+		</dd>		
+		<dd class="good">
+			<div class="row">
+				<div class="col-md-3">
+					<i class="glyphicon glyphicon-folder-open"></i>&nbsp;&nbsp;{$k['category_name']}
+				</div>
+				<div class="col-md-9" style="float: right;">
+					<i class="glyphicon glyphicon-heart" style="color: grey;font-size: 1.2em;"></i><!-- {$k['update_time']} -->120
+					<i class="glyphicon glyphicon-eye-open"></i>&nbsp;&nbsp;{$k['hits']}
+				</div>
+			</div>
+		</dd>
+		</dl>
+	 	</volist> 
+	 	</div>
+		{$page}
+</block>			

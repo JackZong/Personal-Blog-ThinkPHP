@@ -1,0 +1,46 @@
+<extend name="Public:frameset"/>
+<block name="left">
+	<div class="list-group">
+		  <a href="{:U('AdminArticle/articleAll')}" class="list-group-item active">
+		    文章管理<i class="glyphicon glyphicon-chevron-right pull-right"></i>
+		  </a>
+		  <a href="{:U('AdminArticle/articleAdd')}" class="list-group-item">文章发布<i class="glyphicon glyphicon-chevron-right pull-right opacity25"></i></a>
+		  <a href="{:U('Admin/AdminArticle/getFriendsLink')}" class="list-group-item">友情链接<i class="glyphicon glyphicon-chevron-right pull-right opacity25"></i></a>
+		  <a href="{:U('Admin/AdminArticle/sortAll')}" class="list-group-item">分类管理<i class="glyphicon glyphicon-chevron-right pull-right opacity25"></i></a>
+	</div>
+</block>
+<block name="right">
+		
+				<ol class="breadcrumb">
+				  <li>后台管理</li>
+				  <li class="active">文章管理</li>
+				</ol>
+				<div class="row">
+					<div class="col-md-2">分类</div>
+					<div class="col-md-3">标题</div>
+					<div class="col-md-3">发布时间</div>
+					<div class="col-md-2">点击量</div>
+					<div class="col-md-2">操作</div>
+				</div>
+				<hr>
+				<volist name="ArticleAll" id="v">
+					<div class="row">
+						<div class="col-md-2">{$v['category_name']}</div>
+						<div class="col-md-3" title="{$v['title']}">{$v['title']|mb_substr=0,8,'UTF-8'}</div>
+						<div class="col-md-3">{$v['update_time']|date="Y-m-d H:i:s",###}</div>
+						<div class="col-md-2">{$v['hits']}</div>
+						<div class="col-md-2">
+						
+						<a href="{:U('Admin/AdminArticle/articleEdit',array('article_id'=>$v['id']))}">编辑 </a>
+						
+						
+						
+						| <a href="{:U('AdminArticle/del',array('id'=>$v['id']))}">删除</a></div>
+					</div>
+					<hr>
+				</volist>
+				<div class="row">
+					<div class="pull-right">{$page}</div>
+				</div>
+		
+</block>

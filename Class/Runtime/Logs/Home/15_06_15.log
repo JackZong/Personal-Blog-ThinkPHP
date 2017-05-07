@@ -1,0 +1,613 @@
+[ 2015-06-15T23:29:00+08:00 ] 127.0.0.1 /ClassBlog1/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000628s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001258s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004806s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0125s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0096s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 10 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 10 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined variable: p C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000226s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000476s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047575s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047749s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001206s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001445s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002748s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003175s ]
+
+[ 2015-06-15T23:29:03+08:00 ] 127.0.0.1 /ClassBlog1/?m=Home&c=Index&a=ajaxGetArticle&p=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000717s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001178s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002109s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0109s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: p C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0080s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 20 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0006s ]
+
+[ 2015-06-15T23:29:07+08:00 ] 127.0.0.1 /ClassBlog1/?m=Home&c=Index&a=ajaxGetArticle&p=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000791s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000741s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001734s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002795s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0103s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: p C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0077s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 20 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0007s ]
+
+[ 2015-06-15T23:29:11+08:00 ] 127.0.0.1 /ClassBlog1/?m=Home&c=Index&a=ajaxGetArticle&p=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000680s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001117s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001917s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0099s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: p C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0073s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 20 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0006s ]
+
+[ 2015-06-15T23:29:14+08:00 ] 127.0.0.1 /ClassBlog1/?m=Home&c=Index&a=ajaxGetArticle&p=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000956s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001906s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0091s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: p C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0083s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 20 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0005s ]
+
+[ 2015-06-15T23:29:46+08:00 ] 127.0.0.1 /ClassBlog1/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001284s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004392s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0158s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0094s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 10 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 10 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined variable: p C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000272s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000589s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062465s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062707s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000865s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001188s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001475s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001810s ]
+
+[ 2015-06-15T23:29:54+08:00 ] 127.0.0.1 /ClassBlog1/?m=Home&c=Index&a=ajaxGetArticle&p=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001589s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002656s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0098s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: p C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0078s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 20 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0008s ]
+
+[ 2015-06-15T23:30:01+08:00 ] 127.0.0.1 /ClassBlog1/?m=Home&c=Index&a=ajaxGetArticle&p=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000818s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001907s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003043s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0102s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: p C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0073s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 20 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0006s ]
+
+[ 2015-06-15T23:30:04+08:00 ] 127.0.0.1 /ClassBlog1/?m=Home&c=Index&a=ajaxGetArticle&p=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000640s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000845s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001895s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003024s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0105s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: p C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0079s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 20 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0006s ]
+
+[ 2015-06-15T23:36:03+08:00 ] 127.0.0.1 /ClassBlog1/?m=Home&c=Index&a=ajaxGetArticle&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000663s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001039s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001927s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003197s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0096s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: p C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0079s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 20 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0006s ]
+
+[ 2015-06-15T23:36:06+08:00 ] 127.0.0.1 /ClassBlog1/?m=Home&c=Index&a=ajaxGetArticle&p=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000911s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002653s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0112s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: p C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0071s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 20 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0005s ]
+
+[ 2015-06-15T23:42:11+08:00 ] 127.0.0.1 /ClassBlog1/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001098s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001542s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005393s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0181s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0070s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0009s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 10 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 10 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined variable: p C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000173s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000348s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047465s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047667s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000768s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001461s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001775s ]
+
+[ 2015-06-15T23:42:12+08:00 ] 127.0.0.1 /ClassBlog1/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000983s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001566s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002221s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004475s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0122s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0083s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 10 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 10 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined variable: p C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000214s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000463s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.063079s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.063333s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001333s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001576s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002596s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002960s ]
+
+[ 2015-06-15T23:42:13+08:00 ] 127.0.0.1 /ClassBlog1/?m=Home&c=Index&a=ajaxGetArticle&p=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000810s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000868s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001653s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002744s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0094s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: p C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0071s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 20 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0006s ]
+
+[ 2015-06-15T23:42:15+08:00 ] 127.0.0.1 /ClassBlog1/?m=Home&c=Index&a=ajaxGetArticle&p=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000708s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000906s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001730s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002902s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0097s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: p C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0072s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 20 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0009s ]
+
+[ 2015-06-15T23:42:19+08:00 ] 127.0.0.1 /ClassBlog1/?m=Home&c=Index&a=ajaxGetArticle&p=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000882s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002775s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0111s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: p C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0081s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 20 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0006s ]
+
+[ 2015-06-15T23:42:22+08:00 ] 127.0.0.1 /ClassBlog1/?m=Home&c=Index&a=ajaxGetArticle&p=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000618s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001355s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001742s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003473s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0097s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: p C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0078s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 20 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0006s ]
+
+[ 2015-06-15T23:45:14+08:00 ] 127.0.0.1 /ClassBlog1/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001338s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002563s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004416s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0099s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0075s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 10 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 10 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined variable: p C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000161s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000324s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045091s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045297s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000763s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000951s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001446s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001799s ]
+
+[ 2015-06-15T23:45:16+08:00 ] 127.0.0.1 /ClassBlog1/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000680s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000773s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002489s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0100s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0066s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 10 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 10 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined variable: p C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000351s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044330s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001017s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001250s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001752s ]
+
+[ 2015-06-15T23:45:22+08:00 ] 127.0.0.1 /ClassBlog1/?m=Home&c=Index&a=ajaxGetArticle&p=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000814s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002761s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0097s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: p C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0070s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 20 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0005s ]
+
+[ 2015-06-15T23:45:25+08:00 ] 127.0.0.1 /ClassBlog1/?m=Home&c=Index&a=ajaxGetArticle&p=6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000870s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001676s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002763s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0097s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: p C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0065s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 20 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0005s ]
+
+[ 2015-06-15T23:45:32+08:00 ] 127.0.0.1 /ClassBlog1/?m=Home&c=Index&a=ajaxGetArticle&p=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000890s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001599s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002733s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0092s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: p C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0067s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 20 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0005s ]
+
+[ 2015-06-15T23:45:36+08:00 ] 127.0.0.1 /ClassBlog1/?m=Home&c=Index&a=ajaxGetArticle&p=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000650s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000870s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002635s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0092s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: p C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0066s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 20 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0005s ]
+
+[ 2015-06-15T23:45:38+08:00 ] 127.0.0.1 /ClassBlog1/?m=Home&c=Index&a=ajaxGetArticle&p=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002547s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0093s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: p C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0071s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 20 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0005s ]
+
+[ 2015-06-15T23:45:41+08:00 ] 127.0.0.1 /ClassBlog1/?m=Home&c=Index&a=ajaxGetArticle&p=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000813s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001231s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003640s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0092s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: p C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0068s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 20 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0005s ]
+
+[ 2015-06-15T23:45:44+08:00 ] 127.0.0.1 /ClassBlog1/?m=Home&c=Index&a=ajaxGetArticle&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000840s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001078s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002875s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0584s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: p C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0069s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 20 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0005s ]
+
+[ 2015-06-15T23:45:47+08:00 ] 127.0.0.1 /ClassBlog1/?m=Home&c=Index&a=ajaxGetArticle&p=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000525s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000839s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001552s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002669s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0092s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: p C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0067s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 20 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0006s ]
+
+[ 2015-06-15T23:46:26+08:00 ] 127.0.0.1 /ClassBlog1/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001287s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003693s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0097s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0067s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 10 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 10 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined variable: p C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000357s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040336s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040620s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001498s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001823s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001928s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002926s ]
+
+[ 2015-06-15T23:46:28+08:00 ] 127.0.0.1 /ClassBlog1/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000936s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000884s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001835s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002993s ]
+SQL: SHOW COLUMNS FROM `blog_article_category` [ RunTime:0.0103s ]
+SQL: SELECT `pid`,`id`,`name` FROM `blog_article_category` WHERE `status` = 1  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `blog_article_detail` [ RunTime:0.0065s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getCount(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 9 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 37 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 39 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `blog_article_detail` WHERE `status` = 1 AND `category_id` > 0 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Missing argument 1 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 10 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [2] Missing argument 2 for Home\Model\ArticleDetailModel::getDetail(), called in C:\wamp\www\ClassBlog1\Class\Home\Controller\IndexController.class.php on line 10 and defined C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 6 行.
+NOTIC: [8] Undefined variable: category_id C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 11 行.
+NOTIC: [8] Undefined variable: p C:\wamp\www\ClassBlog1\Class\Home\Model\ArticleDetailModel.class.php 第 13 行.
+SQL: SELECT ad.id,ad.title,ad.content,ad.hits,ad.img_file,ad.tags,ad.create_time,ad.update_time,ac.name AS category_name FROM blog_article_detail ad INNER JOIN blog_article_category AS ac ON ad.category_id = ac.id  WHERE ad.status = 1 AND ad.category_id > 0 ORDER BY hits desc LIMIT 0,3   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000179s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000376s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051058s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051237s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000661s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000818s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002401s ]
+

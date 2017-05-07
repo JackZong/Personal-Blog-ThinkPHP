@@ -1,0 +1,61 @@
+<extend name="Public:frameset"/>
+
+<block name="left">
+	<div class="list-group">
+		  <a href="{:U('AdminArticle/articleAll')}"class="list-group-item ">
+		    文章管理<i class="glyphicon glyphicon-chevron-right pull-right"></i>
+		  </a>
+		  <a href="{:U('AdminArticle/articleAdd')}" class="list-group-item">文章发布<i class="glyphicon glyphicon-chevron-right pull-right opacity25"></i></a>
+		  <a href="{:U('Admin/AdminArticle/getFriendsLink')}" class="list-group-item active">友情链接<i class="glyphicon glyphicon-chevron-right pull-right opacity25"></i></a>
+		  <a href="{:U('Admin/AdminArticle/sortAll')}" class="list-group-item">分类管理<i class="glyphicon glyphicon-chevron-right pull-right opacity25"></i></a>
+	</div>
+</block>
+	<block name="right">		
+				<ol class="breadcrumb">
+				  <li>后台管理</li>
+				  <li class="active">友情链接</li>
+				</ol>
+				
+				<div class="row">
+					<div class="col-md-2">链接名称</div>
+					<div class="col-md-4">URL</div>
+					<div class="col-md-3">显示</div>
+					<div class="col-md-3">操作</div>
+				</div>
+				<hr>
+			 <volist name="friendlink" id="l">
+				<div class="row">
+					<div class="col-md-2">{$l['name']}</div>
+					<div class="col-md-4">{$l['url']}</div>
+					<div class="col-md-3">
+					<if condition="$l['index_show'] eq 0">
+					<i class="glyphicon glyphicon-remove"></i>
+					<else/>
+					<i class="glyphicon glyphicon-ok"></i>
+					</if>
+					</div>
+					<div class="col-md-3">
+					<if condition="$l['index_show'] eq 0">
+					<a href="{:U('AdminArticle/editFl',array('index_show'=>1,'id'=>$l['id']))}">开启 </a>|
+					<else/>
+					<a href="{:U('AdminArticle/editFl',array('index_show'=>0,'id'=>$l['id']))}">禁用 </a>| 
+					</if>
+					<a href="{:U('AdminArticle/delFriendLink',array('id'=>$l['id']))}">删除</a></div>
+				</div>
+				<hr>
+			</volist>	
+			<br><br><br><br><br>
+				<h3>添加友情链接</h3>
+				<form class="form-inline" action="{:U('AdminArticle/addFriendLink')}" method="POST">
+				  <div class="form-group">
+				    <label for="exampleInputName2">链接名称</label>
+				    <input type="text" class="form-control" id="exampleInputName2" name="linkname">
+				  </div>
+				  <div class="form-group">
+				    <label for="exampleInputEmail2">链接URL</label>
+				    <input type="text" class="form-control" id="exampleInputEmail2" name="linkurl">
+				  </div>
+				  <button type="submit" class="btn btn-success btn-default">添加</button>
+				</form>
+</block>
+	

@@ -1,0 +1,46 @@
+<extend name="Public:frameset" />
+
+<block name="left">
+	<div class="list-group">
+		  <a href="{:U('AdminArticle/articleAll')}" id="list1" class="list-group-item active">
+		    文章管理<i class="glyphicon glyphicon-chevron-right pull-right"></i>
+		  </a>
+		  <a href="{:U('AdminArticle/articleAdd')}" class="list-group-item active">文章发布<i class="glyphicon glyphicon-chevron-right pull-right opacity25"></i></a>
+		  <a href="{:U('Admin/AdminArticle/getFriendsLink')}" class="list-group-item">友情链接<i class="glyphicon glyphicon-chevron-right pull-right opacity25"></i></a>
+		  <a href="{:U('Admin/AdminArticle/sortAll')}" class="list-group-item">分类管理<i class="glyphicon glyphicon-chevron-right pull-right opacity25"></i></a>
+	</div>
+</block>
+
+
+<block name="right">
+
+	<ol class="breadcrumb">
+				  <li>后台管理</li>
+				  <li class="active">文章管理</li>
+				    <li class="active">编辑</li>
+				</ol>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<!-- <form action="{:U('AdminArticle/articleUpdate',array('article_id'=>$editText['id']))}" method="post"> -->
+	 <form action="{:U('AdminArticle/articleUpdate')}" method="post"> 
+	<h4>文章内容</h4>
+<textarea name="content" cols="100" rows="15">{$editText['content']}</textarea>
+<br>
+<br>
+<br>
+<br>
+<br>
+标题<input type="text" name="title" value="{$editText['title']}">
+
+发布时间<input type="text" name="update_time" value="{$editText['create_time']|date='Y-m-d',###}">
+<input type="submit" class="submit" value="提交">
+<input type="radio" name="id" checked="checked" value="{$editText['id']}" style="display: none">
+
+
+</form>
+</div>
+
+</div>
+</div>
+</block>

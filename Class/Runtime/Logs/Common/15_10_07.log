@@ -1,0 +1,30 @@
+[ 2015-10-07T20:48:04+08:00 ] 127.0.0.1 /Blog2.0/index.php?m=Index&c=AdminArticle&a=articleAll
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000684s ]
+ERR: 无法加载模块:Index
+
+[ 2015-10-07T20:48:11+08:00 ] 127.0.0.1 /Blog2.0/index.php?m=Index&c=Index&a=articleAll
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+ERR: 无法加载模块:Index
+
+[ 2015-10-07T20:48:15+08:00 ] 127.0.0.1 /Blog2.0/index.php?m=Index&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001050s ]
+ERR: 无法加载模块:Index
+
+[ 2015-10-07T20:48:21+08:00 ] 127.0.0.1 /Blog2.0/index.php?m=Index&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000901s ]
+ERR: 无法加载模块:Index
+
+[ 2015-10-07T20:48:22+08:00 ] 127.0.0.1 /Blog2.0/index.php?m=Index&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000905s ]
+ERR: 无法加载模块:Index
+

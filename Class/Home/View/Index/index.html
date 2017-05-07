@@ -1,0 +1,54 @@
+<extend name="Public:frameset" />
+<block name="body-left">
+	<div class="headline">
+     <h3>
+     	<span class="section-head-label"></span>
+		文章推荐
+    </h3>
+	</div>
+	<div class="article-list">
+	 <volist name="detail" id="k">
+			<dl class="article">
+			<div class="title_time">
+			<div class="row">
+			<div class="col-md-1" style="line-height:0;margin-top:4px;padding-left:0;">
+			<span style="font-size: 60px;overflow:hidden;color:green;">{$k['create_time']}</span>
+			</div>
+			<div class="col-md-11">
+			<a href="{:U('Article/detail',array('id'=>$k['id']))}" title="{$k['title']}">{$k['title']}</a>
+			<div class="artitle_time_date">{$k['hour']}</div>
+			</div>
+			</div>
+		</div> 	
+		<dd class="article_image">
+		<a href="{:U('Article/detail',array('id'=>$k['id']))}" title="{$k['title']}">
+			<img class="img" src="__PUBLIC__/assets/global/{$k['img_file']}" onerror="this.src='./Public/assets/global/img/error.png'" style="height: 238px;">  
+		</a>
+		<script type="text/javascript">	
+		</script>
+		</dd>
+		<dd>
+			<div class="content">
+				<p>{$k['content']|mb_substr=###,0,100,'utf-8'}...</p> 					
+			</div>
+		</dd>		
+		<dd class="good">
+			<div class="row">
+				<div class="col-md-3">
+					<i class="glyphicon glyphicon-folder-open"></i>&nbsp;&nbsp;<a href="{:U('Article/category',array('id'=>$k['cid']))}" style="color:grey;">{$k['category_name']}</a>
+				</div>
+				<div class="col-md-9" style="float: right;">
+					<i class="glyphicon glyphicon-heart" style="font-size: 1.2em;"></i><!-- {$k['update_time']} -->120
+					<i class="glyphicon glyphicon-eye-open"></i>&nbsp;&nbsp;{$k['hits']}
+				</div>
+			</div>
+		</dd>
+		</dl>
+	 	</volist> 
+	 	</div>
+		<div class="article-page">
+			 {$page}
+			
+		</div>
+	
+</block>		
